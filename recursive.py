@@ -176,3 +176,106 @@
 # print(sume(n,sum1))
 
 #11
+# def collatz(n):
+#     if n == 1:
+#         return 1
+#     elif n%2==0:
+#         return collatz(n/2)
+#     else:
+#         return collatz((3*n)+1)
+# 
+# N = int(input("Input a positive number: "))
+# print(collatz(N))
+
+#12
+# def sumdigi(x,n,k,na):
+#     x2 = x
+#     sum3 = 0
+#     sum2 = 0
+#     while x2 != 0:
+#         if k == 1:
+#             sum3 += n
+#             if sum3%na!=0:
+#                 sum2 += sum3
+#             x2 = x2 - 1      
+#         else:        
+#             sum3 += n
+#             sum2 += sum3
+#             x2 = x2 - 1    
+#     return sum2    
+#         
+# def sumMul35(n1,n2,sum1):
+#     ok=0
+#     start = int(999/n1)
+#     sum1 += sumdigi(start,n1,ok,n2)
+#     start2 = int(999/n2)
+#     ok=1
+#     sum1 += sumdigi(start2,n2,ok,n1)
+#     return sum1
+# n3 = 5
+# n4 = 3
+# sum4 = 0
+# print(sumMul35(n3,n4,sum4))
+
+#13
+# N = 4
+# num1 = 6
+# list1 = []
+# while N > 0:
+#     sum1 = 0
+#     if num1 % 2 == 0 and num1 % 5 != 0:
+#         n1 = int(num1/2)
+#         for i in range(1, n1+1):
+#             if num1 % i == 0:
+#                 sum1 += i
+#         if sum1 == num1:     
+#             list1.append(sum1)
+#             N = N - 1
+#             num1 += 4
+#         else:
+#             num1 += 4
+#     else:
+#          num1 += 4
+# for i in list1:
+#     print(i)
+# print("hi")
+
+# def is_perfect_number(num):
+#     divisors = [1]
+#     for i in range(2, num // 2 + 1):
+#         if num % i == 0:
+#             divisors.append(i)
+#     return sum(divisors) == num
+# 
+# perfect_numbers = []
+# num = 2  # Start checking from 2
+# 
+# while len(perfect_numbers) < 4:
+#     if is_perfect_number(num):
+#         perfect_numbers.append(num)
+#     num += 1
+# 
+# for i, perfect_num in enumerate(perfect_numbers):
+#     print(f"Perfect number {i + 1}: {perfect_num}")
+
+#14
+# def sum_of_digi(a,end,sum1=0):
+#     for i in range(1,end):
+#         if a % i == 0:
+#             sum1 += i
+#     return sum1
+# def isAmicable(x,y):
+#     sum1=0
+#     x_2 = int(x/2)
+#     y_2 = int(y/2)
+#     x1 = sum_of_digi(x,x_2,sum1) + x_2
+#     print(x1)
+#     x2 = sum_of_digi(y,y_2,sum1) + y_2
+#     print(x2)
+#     if x1 == y and x2 == x:
+#         return "They are amicable"
+#     else:
+#         return "They are not amicable"
+# n1 = 220
+# n2 = 284
+# print(isAmicable(n1,n2))
